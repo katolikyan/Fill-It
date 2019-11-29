@@ -46,9 +46,22 @@ $>
 Backtracking algorithm. The square is a string.\
 Tetrimino encoding logic (after check for valid input) is to find the first `#` in the tetrimino and transform other 3 `#` to 3 numbers using indexes which fully describes the tetrimino:
 
+#### Map of indexes for each `#`
+```bash
+. . 0 . .
+. 3 # 1 .
+5 4 2 . .
+```
+
+#### Examples
 ```bash
 #...$
-###.$  ->    
+###.$  ->  [2, 1, 1] 
 ....$
+....$
+
+....$
+.##.$  ->  [1, 5, 1] 
+##..$
 ....$
 ```
